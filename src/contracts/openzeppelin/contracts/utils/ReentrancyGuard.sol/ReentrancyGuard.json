@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ReentrancyGuard",
+  "sourceName": "contracts/openzeppelin/contracts/utils/ReentrancyGuard.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b506001600055603f8060226000396000f3fe6080604052600080fdfea2646970667358221220c19be73cd74bccee1bc767c22495761c957a5ccca51e5c6f42a64e85f8f53f5664736f6c63430007050033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220c19be73cd74bccee1bc767c22495761c957a5ccca51e5c6f42a64e85f8f53f5664736f6c63430007050033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EIP712",
+  "sourceName": "contracts/lib/EIP712.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220b5e8a9de8af1b64d2b20e14728b38ecf14ce122ff193118da1264ebd4e1a089b64736f6c63430007050033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220b5e8a9de8af1b64d2b20e14728b38ecf14ce122ff193118da1264ebd4e1a089b64736f6c63430007050033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

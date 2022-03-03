@@ -1,0 +1,225 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ExchangeCore",
+  "sourceName": "contracts/exchange/ExchangeCore.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "registry",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "maker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "staticTarget",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes4",
+          "name": "staticSelector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "staticExtradata",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "maximumFill",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "listingTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "expirationTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "salt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "orderbookInclusionDesired",
+          "type": "bool"
+        }
+      ],
+      "name": "OrderApproved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "maker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newFill",
+          "type": "uint256"
+        }
+      ],
+      "name": "OrderFillChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "firstHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "secondHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "firstMaker",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "secondMaker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newFirstFill",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newSecondFill",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "metadata",
+          "type": "bytes32"
+        }
+      ],
+      "name": "OrdersMatched",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "approved",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "fills",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "registries",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6000805460ff1916905560c0604052601a60808190527f19457468657265756d205369676e6564204d6573736167653a0a00000000000060a0908152610048916002919061005b565b5034801561005557600080fd5b506100fc565b828054600181600116156101000203166002900490600052602060002090601f01602090048101928261009157600085556100d7565b82601f106100aa57805160ff19168380011785556100d7565b828001600101855582156100d7579182015b828111156100d75782518255916020019190600101906100bc565b506100e39291506100e7565b5090565b5b808211156100e357600081556001016100e8565b6101728061010b6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063caed80df14610046578063fac7fc3814610080578063ffc2ab14146100ac575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100ea565b604080519115158252519081900360200190f35b61006c6004803603604081101561009657600080fd5b506001600160a01b0381351690602001356100ff565b6100d8600480360360408110156100c257600080fd5b506001600160a01b03813516906020013561011f565b60408051918252519081900360200190f35b60036020526000908152604090205460ff1681565b600560209081526000928352604080842090915290825290205460ff1681565b60046020908152600092835260408084209091529082529020548156fea264697066735822122011f4dae9d97582462e8643db7addb42736796f0f369ff6422073d5ab7844116964736f6c63430007050033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063caed80df14610046578063fac7fc3814610080578063ffc2ab14146100ac575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100ea565b604080519115158252519081900360200190f35b61006c6004803603604081101561009657600080fd5b506001600160a01b0381351690602001356100ff565b6100d8600480360360408110156100c257600080fd5b506001600160a01b03813516906020013561011f565b60408051918252519081900360200190f35b60036020526000908152604090205460ff1681565b600560209081526000928352604080842090915290825290205460ff1681565b60046020908152600092835260408084209091529082529020548156fea264697066735822122011f4dae9d97582462e8643db7addb42736796f0f369ff6422073d5ab7844116964736f6c63430007050033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
